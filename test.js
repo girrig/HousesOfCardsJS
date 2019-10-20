@@ -1,20 +1,46 @@
-function startGame() {
-    myGamePiece = new component(30, 30, "red", 10, 120);
-    myGamePiece.gravity = 0.05;
-    myScore = new component("30px", "Consolas", "black", 280, 40, "text");
-    myGameArea.start();
+var main_container = $("#main-container");
+var main_canvas = $("#main-canvas");
+
+var ctx;
+var img;
+
+function init() {
+    initCanvas();
+    initGame();
+    main_loop();
 }
 
-var myGameArea = {
-    canvas : document.createElement("canvas"),
-    start : function() {
-        this.canvas.width = 480;
-        this.canvas.height = 270;
-        this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-        this.frameNo = 0;
-    },
-    clear : function() {
-        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    }
-};
+function initCanvas() {
+    ctx = main_canvas[0].getContext("2d");
+    img = new Image();
+    img.onload = function(){
+        ctx.drawImage(img, 0, 0);
+    };
+    
+    img.src = "img/kenny/Cards/cardBack_blue1.png";
+
+    window.addEventListener('resize', onWindowResize, false);
+}
+
+function initGame() {
+
+}
+
+function draw() {
+    img.src = "img/kenny/Cards/cardBack_blue1.png";
+}
+
+function main_loop() {
+    //Get action
+    //Calculate
+    draw();
+}
+
+function onWindowResize() {
+    ctx = main_canvas[0].getContext("2d");
+    ctx.canvas.width  = window.innerWidth;
+    ctx.canvas.height = window.innerHeight;
+    draw();
+}
+
+main_canvas.onload = init();
