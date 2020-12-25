@@ -1,4 +1,4 @@
-name: deploy-to-server
+name: Deploy to Server
 
 on: [push]
 
@@ -8,10 +8,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - name: Checkout
+      uses: actions/checkout@v2.3.4
 
-    - name: Copy files via scp
-      uses: appleboy/scp-action@master
+    - name: SCP Command to Transfer Files
+      uses: appleboy/scp-action@v0.1.1
       env:
         HOST: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.USERNAME }}
@@ -21,8 +22,8 @@ jobs:
         source: "."
         target: "/var/www/housesofcards.brandonodom.com/public_html"
 
-    - name: Executing remote command
-      uses: appleboy/ssh-action@master
+    - name: SSH Remote Commands
+      uses: appleboy/ssh-action@v0.1.4
       with:
         host: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.USERNAME }}
