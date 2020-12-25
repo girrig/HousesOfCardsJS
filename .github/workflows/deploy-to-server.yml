@@ -13,12 +13,11 @@ jobs:
 
     - name: SCP Command to Transfer Files
       uses: appleboy/scp-action@v0.1.1
-      env:
+      with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-      with:
         source: "."
         target: "/var/www/housesofcards.brandonodom.com/public_html"
 
