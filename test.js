@@ -5,6 +5,7 @@ var ctx;
 var img;
 
 function init() {
+    onWindowResize();  // Get window size
     initCanvas();
     initGame();
     main_loop();
@@ -16,8 +17,8 @@ function initCanvas() {
     img.onload = function(){
         ctx.drawImage(img, 0, 0);
     };
-    
-    img.src = "img/kenny/Cards/cardBack_blue1.png";
+
+    img.src = "img/kenny/cards/cardBack_red3.png";
 
     window.addEventListener('resize', onWindowResize, false);
 }
@@ -27,7 +28,7 @@ function initGame() {
 }
 
 function draw() {
-    img.src = "img/kenny/Cards/cardBack_blue1.png";
+    img.src = "img/kenny/Cards/cardBack_red3.png";
 }
 
 function main_loop() {
