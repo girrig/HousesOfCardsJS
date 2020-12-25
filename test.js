@@ -5,8 +5,8 @@ var ctx;
 var img;
 
 function init() {
-    onWindowResize();  // Get window size
     initCanvas();
+    onWindowResize();
     initGame();
     main_loop();
 }
@@ -17,8 +17,6 @@ function initCanvas() {
     img.onload = function(){
         ctx.drawImage(img, 0, 0);
     };
-
-    img.src = "img/kenny/cards/cardBack_red3.png";
 
     window.addEventListener('resize', onWindowResize, false);
 }
