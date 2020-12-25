@@ -28,4 +28,4 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: cat /opt/app/README.md
+        script: echo "New commit deployed successfully"
