@@ -1,3 +1,5 @@
+var $ = require( "jquery" );
+
 var mainContainer = $("#main-container");
 var mainCanvas = $("#main-canvas");
 

@@ -1,0 +1,24 @@
+{
+  "name": "housesofcardsjs",
+  "version": "0.1.0",
+  "description": "Helping a friend write a card game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/girrig/HousesOfCardsJS.git"
+  },
+  "author": "Brandon Odom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/girrig/HousesOfCardsJS/issues"
+  },
+  "homepage": "https://github.com/girrig/HousesOfCardsJS#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jquery": "^3.6.0",
+    "socket.io": "^4.0.0"
+  }
+}
