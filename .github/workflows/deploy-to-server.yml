@@ -19,7 +19,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         source: "."
-        target: "/var/www/housesofcards.brandonodom.com/public_html"
+        target: "/apps/housesofcards/"
 
     - name: SSH Remote Commands
       uses: appleboy/ssh-action@v0.1.4
