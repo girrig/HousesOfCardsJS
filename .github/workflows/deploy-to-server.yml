@@ -28,4 +28,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: echo "New commit deployed successfully"
+        script: |
+          npm install
+          echo "New commit deployed successfully"
+          pm2 restart app.js
