@@ -29,6 +29,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
+          cd /apps/housesofcards/
           npm install
+          node start index.js &
           echo "New commit deployed successfully"
-          pm2 restart app.js
