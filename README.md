@@ -1,10 +1,14 @@
 # HousesOfCardsJS
+
 Helping a friend write a card game
 
+## Dependencies
 
-Dependencies:
+* Node.js
+* Express.js
+* Browserify
+* Socket.IO
 
-Node.js
-Express.js
-Browserify
-Socket.IO
+## To bundle for release
+
+browserify app.js -o bundle.js

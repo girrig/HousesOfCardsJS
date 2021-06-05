@@ -32,7 +32,7 @@ function init_canvas() {
 }
 
 function init_game() {
-    var relitive_path = "img/kenny/Cards/";
+    var relitive_path = "img/kenny/cards/";
     var suits = ["Clubs", "Diamonds", "Hearts", "Spades"];
     for(var i = 0; i < suits.length; i++){
         for(var j = 1; j <= 13; j++){
@@ -95,7 +95,7 @@ function main_loop() {
 /////////////////////
 
 function onMouseDown(event) {
-    console.log("onMouseDown");
+    //console.log("onMouseDown");
 	// Getting mouse position (assumes canvas starts at (0,0))
 	var mouseX = event.pageX;
 	var mouseY = event.pageY;
@@ -126,7 +126,7 @@ function onMouseDown(event) {
 }
 
 function onMouseUp(event) {
-    console.log("onMouseUp");
+    //console.log("onMouseUp");
     window.addEventListener("mousedown", onMouseDown, false);
 	window.removeEventListener("mouseup", onMouseUp, false);
 	if (dragging) {
@@ -136,7 +136,7 @@ function onMouseUp(event) {
 }
 
 function onMouseMove(event) {
-    console.log("onMouseMove");
+    //console.log("onMouseMove");
     // Assumes the dragging object is at the back of the array
     var dragged_object = cards[cards.length - 1];
 
