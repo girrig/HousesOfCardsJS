@@ -30,6 +30,6 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           cd /apps/housesofcards/
-          npm install
-          node start index.js &
+          npm ci
+          pm2 restart index.js
           echo "New commit deployed successfully"
