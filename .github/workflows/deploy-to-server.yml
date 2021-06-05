@@ -31,5 +31,6 @@ jobs:
         script: |
           cd /apps/housesofcards/
           npm ci
-          pm2 restart index.js
+          pm2 stop index.js
+          pm2 start index.js
           echo "New commit deployed successfully"
